@@ -1,0 +1,12 @@
+<?xml version='1.0'?>
+<page 
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:noNamespaceSchemaLocation='urn:magento:framework:View/Layout/etc/page_configuration.xsd'
+>
+	<head><css src='Frugue_Shipping::main.css'/></head>
+	<body>
+		<referenceContainer name='columns.top'>
+			<block before='-' class='Frugue\Shipping\Header' name='Frugue\Shipping\Header'/>
+		</referenceContainer>
+	</body>
+</page>
