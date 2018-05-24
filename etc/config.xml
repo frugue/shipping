@@ -1,0 +1,31 @@
+<?xml version='1.0'?>
+<config
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:noNamespaceSchemaLocation='urn:magento:module:Magento_Store:etc/config.xsd'
+>
+    <default>
+        <carriers>
+			<frugue>
+<!-- 2018-05-13
+@used-by \Magento\Shipping\Model\CarrierFactory::createIfActive():
+	return $this->_scopeConfig->isSetFlag(
+		'carriers/' . $carrierCode . '/active',
+		\Magento\Store\Model\ScopeInterface::SCOPE_STORE,
+		$storeId
+	) ? $this->create(
+		$carrierCode,
+		$storeId
+	) : false;
+https://github.com/magento/magento2/blob/2.2.4/app/code/Magento/Shipping/Model/CarrierFactory.php#L98-L115
+-->
+				<active>1</active>
+				<model>Frugue\Shipping\Method</model>
+			</frugue>
+        </carriers>
+		<frugue_shipping>
+			<main>
+				<enable>1</enable>
+			</main>
+		</frugue_shipping>
+    </default>
+</config>
