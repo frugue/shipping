@@ -1,5 +1,5 @@
 <?php
-namespace Frugue\Core;
+namespace Frugue\Shipping;
 // 2018-05-13
 /** @method static Settings s() */
 final class Settings extends \Df\Shipping\Settings {
