@@ -1,9 +1,8 @@
 <?php
 namespace Frugue\Shipping;
 use Magento\Quote\Model\Quote\Address\RateRequest as Req;
+use Magento\Quote\Model\Quote\Address\RateResult\Error as ResE;
 use Magento\Quote\Model\Quote\Address\RateResult\Method as ResM;
-use Magento\Shipping\Model\Carrier\AbstractCarrier as AC; // 2018-04-17 It is used by PHPDoc.
-use Magento\Shipping\Model\Carrier\AbstractCarrierInterface as IAC; // 2018-04-17 It is used by PHPDoc.
 use Magento\Shipping\Model\Carrier\CarrierInterface as IC; // 2018-04-17 It is used by PHPDoc.
 use Magento\Shipping\Model\Rate\Result as Res;
 // 2018-05-13
@@ -76,7 +75,7 @@ final class Method extends \Df\Shipping\Method {
 					$m('us_domestic_standard', 'Standard delivered (3-6 business days)', 0, 'USD');
 					$m('us_domestic_priority', 'Priority delivered (1-2 business days)', 19.99, 'USD');
 				}
-				else {
+				else if (!df_eu($to)) {
 					$m('us_international_standard', 'Standard delivered (7-21 business days)', 4.99, 'USD');
 					$m('us_international_priority', 'Priority delivered (1-5 business days)', 19.99, 'USD');
 				}

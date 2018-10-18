@@ -7,6 +7,5 @@
 // https://magento.stackexchange.com/a/117236
 // 2018-04-22 «What are requirejs-config.js `mixins`?» https://mage2.pro/t/5297
 var config = {config: {mixins: {
-	'Magento_Customer/js/model/customer-addresses': {'Frugue_Shipping/addresses': true}
-	,'Magento_Theme/js/jquery.rd-navbar': {'Frugue_Shipping/rd-navbar': true}
+	'Magento_Theme/js/jquery.rd-navbar': {'Frugue_Shipping/rd-navbar': true}
 }}};
