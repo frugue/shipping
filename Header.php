@@ -1,5 +1,6 @@
 <?php
 namespace Frugue\Shipping;
+use Frugue\Store\Switcher as Sw;
 use Magento\Framework\View\Element\AbstractBlock as _P;
 use Magento\Store\Api\StoreResolverInterface as IStoreResolver;
 // 2018-05-12
@@ -32,7 +33,7 @@ class Header extends _P {
 				'div', 'container', df_cc_s(
 					'<i class="icon-truck"></i>Need EU shipping?'
 					,sprintf('Please <a href="%s" title="%s"><strong>switch to our EU store</strong></a>.',
-						df_url('stores/store/switch', [IStoreResolver::PARAM_NAME => 'uk']), 'our EU store'
+						df_url(Sw::PATH, Sw::params('uk')), 'our EU store'
 					)
 					,sprintf('Frugue USA <a href="%s" title="%s">does not ship to EU</a>.',
 						df_url() . 'shipping-delivery', 'our delivery terms'
