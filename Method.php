@@ -60,6 +60,17 @@ final class Method extends \Df\Shipping\Method {
 					$m('fr_international_priority', 'Priority delivered (1-5 business days)', 19.99, 'EUR');
 				}
 				break;
+			// 2020-01-24 "Implement shipping rates for the Russian store": https://github.com/frugue/shipping/issues/2
+			case 'ru':
+				if ('RU' === $to) {
+					$m('ru_domestic_standard', 'Стандартная доставка (8-16 рабочих дней)', 0, 'RUB');
+					$m('ru_domestic_priority', 'Быстрая доставка (1-3 рабочих дня)', 1299, 'RUB');
+				}
+				else {
+					$m('ru_international_standard', 'Стандартная доставка (8-16 рабочих дней)', 349, 'RUB');
+					$m('ru_international_priority', 'Быстрая доставка (1-3 рабочих дня)', 1299, 'RUB');
+				}
+				break;
 			case 'uk':
 				if ('GB' === $to) {
 					$m('uk_domestic_standard', 'Standard delivered (2-3 business days)', 0, 'GBP');
