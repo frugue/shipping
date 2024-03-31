@@ -1,4 +1,4 @@
-A shipping module for [frugue.com](https://frugue.com).
+A shipping module for [frugue.com](https://frugue.com) (Magento 2).
 
 ## How to install
 ```        
