@@ -7,7 +7,7 @@
 	<head><css src='Frugue_Shipping::main.css'/></head>
 	<body>
 		<referenceContainer name='columns.top'>
-<!-- 2019-03-23 Dmitry Fedyuk https://www.upwork.com/fl/mage2pro
+<!-- 2019-03-23 Dmitry Fedyuk https://github.com/dmitrii-fediuk
 «Element 'block', attribute 'name': 'Frugue\Shipping\Header' is not a valid value
 of the atomic type 'elementNameType'.»
 https://github.com/magento/magento2/blob/2.0.0/lib/internal/Magento/Framework/View/Layout/etc/elements.xsd#L141-L145 -->
